@@ -1,0 +1,289 @@
+body  {
+background-color:#D5FEC2;
+}
+label {
+	float: left;
+	width: 5em;
+	text-align:right;
+
+}
+
+input{
+	margin-left:1em;
+	margin-bottom:.3em;
+	color: blue;
+	 
+}
+
+.dropdownmenu {
+    background-color: #666;
+}
+.dropdownmenu ul {
+    list-style-type: none; 
+    margin: 0px; 
+    padding: 0.01em;
+} 
+.dropdownmenu ul { /* Masquage des sous-menu par defaut */
+    display: none;
+}
+.dropdownmenu li {
+    /* Disposition horizontale des elements de menu */
+    display: inline-block;
+    /* Positionnement relative des elements de menu pour pouvoir    positionner les sous-menu correctement en absolu */
+    position: relative;
+}
+.dropdownmenu a {
+    /* On transforme les liens en bloc pour pouvoir les dimensionner */
+    display: block;
+    /* Dimensions des liens */ 
+    width: 160px; 
+    height: 30px; 
+    line-height: 30px; 
+    /* Doit etre equivalent a la hauteur du menu pour centrer le texte verticalement */
+    padding: 3px 10px;
+    text-align: center;
+}
+.dropdownmenu li:hover ul {
+    /* Affichage du soumenu au survol */
+    display: block;
+    /* Positionnement du sous-menu */ 
+    position: absolute; 
+    top: 30px; /* Hauteur du menu + hauteur du padding top et bottom : 30 + 3 + 3 = 36 */ 
+    left: 0px; /* Decalage du sous-menu par rapport aux liens du menu*/ 
+    z-index: 100; /* Gestion de la superposition des sous-menus par rapport au reste de la page */ 
+}
+.dropdownmenu ul a { 
+    /* Changement de l'affichage des liens des    sous-menus pour ne pas les afficher en inline-block comme les liens de menu, ils seront donc verticaux */
+    display: block;
+}
+
+/* Gestion des couleurs */
+.dropdownmenu li { 
+    background-color: #666; /* Couleur d'arriere-plan du menu */
+}
+.dropdownmenu li a { 
+    color: #ccc; /* Couleur du texte du menu */ 
+}
+.dropdownmenu li:hover {
+    background-color: #000; /* Couleur d'arriere-plan du menu au survol */
+}
+.dropdownmenu li:hover a {
+    color: #fff; /* Couleur du texte du menu au survol */ 
+}
+.dropdownmenu ul li { 
+    background-color: #ccc; /* Couleur d'arriere-plan des sous-menu */ 
+}
+.dropdownmenu ul li:hover {
+    background-color: #000; /* Couleur d'arriere-plan des sous-menu au survol */ 
+}
+.dropdownmenu ul li a {
+    color: #666; /* Couleur du texte des sous-menu */ 
+}
+.dropdownmenu ul li:hover a {
+    color: #f00; /* Couleur du texte des sous-menu au survol */
+}
+h1{
+	left: -100%;
+}
+p {
+	color: black;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:19px;	
+	 
+}
+#date {
+   position:absolute;
+   top:12px;
+   right:10px;
+   font-family:Arial, Helvetica, sans-serif;
+   font-size:14px;
+   font-weight:bold;
+   color:#ccc;
+}
+.proprietes-list{	
+}
+
+.proprietes-list .table {
+	display: table;
+	width: 98.8%;
+	margin: 10px auto;
+	border-collapse:separate;
+	border-spacing:10px 0;
+	table-layout: fixed;
+}
+
+.proprietes-list .table .tr {
+	display: table-row;
+}
+.proprietes-list .table .colon {
+	display: table-cell;
+	border:1px #cfcece solid;
+}	
+.footer {
+  width:100%;
+  padding: 0.2em;
+  background-color: #666;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ccc;
+  position: fixed;
+  bottom: 0px;
+}
+footer {
+  position:absolute;
+  text-align: center;
+  background-color: #666;
+  color: #ccc;
+  bottom: 0px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  z-index: 1; 
+}
+ * {
+        box-sizing: border-box
+      }
+      .mySlides {
+        display: none
+      }
+      img {
+        vertical-align: middle;
+      }
+      .slideshow-container {
+        max-width: 451px;
+        position: relative;
+        margin: auto;
+		margin-top:5%;
+      }
+      /* Next & previous buttons */
+      .prev,
+      .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover,
+      .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      /* Caption text */
+      .text {
+        color: #FF0000;
+        font-size: 16px;
+		font-weight:bold;
+        padding: 8px 12px;
+        position: absolute;
+        top: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      /* Number text (1/4 etc) */
+      .numbertext {
+        color: #ffffff;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #999999;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      .active,
+      .dot:hover {
+        background-color: #111111;
+      }
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      @-webkit-keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      }
+      @keyframes fade {
+        from {
+          opacity: .4
+        }
+        to {
+          opacity: 1
+        }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev,
+        .next,
+        .text {
+          font-size: 11px
+        }
+	.bout {
+  align-self: center;
+  background-color: #fff;
+  background-image: none;
+  background-position: 0 90%;
+  background-repeat: repeat no-repeat;
+  background-size: 4px 3px;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-sizing: border-box;
+  color: #41403e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Neucha, sans-serif;
+  font-size: 1rem;
+  line-height: 23px;
+  outline: none;
+  padding: .75rem;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.bout:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.bout:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}

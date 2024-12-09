@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Belle Maison</title>
+<link href="../Css Files/mon-css.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+ <ul class="dropdownmenu">
+  <li><a href="Index.html">Accueil</a></li>
+  <li><a href="Proprietes.html">Propriétés</a>
+       <ul>
+           <li><a href="Maisons.html">Maisons</a></li>
+           <li><a href="condominiums.html">Condominiums</a></li>
+           <li><a href="townhouses.html">Townhouse</a></li>
+           <li><a href="duplex.html">Duplex</a></li>
+       </ul>
+  <li><a href="Calculhypotheque.html">Hypothèque</a></li>
+  <li><a href="Contact Us.html">Contactez nous</a></li>
+  
+  <p id="date">
+    <script language="JavaScript">
+      var Heure=new Date();
+      var jour=Heure.getDate();
+      var mois=Heure.getMonth()+1;
+      var an=Heure.getFullYear();
+      var heure=Heure.getHours();
+      var minutes=Heure.getMinutes();
+document.write(" ",jour,"/",mois,"/",an," - ",heure,":",minutes," min");
+</script>
+</p>
+</ul>
+ <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 4</div>
+        <img src="../Images/condo2.jpg">
+        <div class="text">Condos</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="../Images/Maison4.jpg">
+        <div class="text">Maisons</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="../Images/duplex3.jpg">
+        <div class="text">Duplex</div>
+      </div>
+      <div class="mySlides fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="../Images/townhouse4.jpg">
+        <div class="text">Townhouses</div>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if(n > slides.length) {
+          slideIndex = 1
+        }
+        if(n < 1) {
+          slideIndex = slides.length
+        }
+        for(i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for(i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+      }
+    </script>
+<h1>Belle Maison</h1>
+<br><br>
+
+<h3>À propos de Belle Maison </h3>
+
+<p>Aliquam fermentum auctor ipsum, et interdum justo scelerisque ac. Maecenas varius mollis sem at luctus. Phasellus mattis, velit non venenatis pellentesque, dolor ex bibendum nunc, sed blandit nisi risus quis lacus. Nam nec ligula erat. Quisque ornare egestas justo dapibus venenatis. Mauris hendrerit tellus porta ex tempor, at sollicitudin nunc ullamcorper. Nam hendrerit, ex in pellentesque vulputate, mi turpis venenatis justo, non fringilla massa massa a enim. Etiam eu libero eu felis tincidunt faucibus. Praesent cursus turpis et sem pretium, et maximus nulla maximus. Ut augue dolor, convallis a dolor eu, faucibus consequat est. Phasellus condimentum imperdiet arcu in dignissim. In hac habitasse platea dictumst. Aliquam accumsan quis dolor ut ultricies. Quisque ultrices felis vitae neque semper pharetra. Cras leo quam, facilisis eu lorem ac, scelerisque pulvinar diam. Maecenas luctus diam sit amet fringilla malesuada. <br>
+Nam fringilla magna ut ligula iaculis scelerisque. Proin tincidunt lacus at orci faucibus, eget pretium neque tincidunt. Nulla scelerisque nisi sodales enim cursus semper. Pellentesque sed tincidunt eros. Aliquam non odio nulla. Proin risus turpis, rutrum dapibus magna sed, mollis commodo tortor. Proin finibus ex non aliquam auctor. Aliquam malesuada nunc vel magna rhoncus eleifend.  </p>
+
+<p>Morbi interdum laoreet consectetur. <a class="a"href="Contact Us.html">Contactez-nous</a></p>
+<br><br><br>
+<div class="footer">&copy; <script>document.write(new Date().getFullYear());</script> Belle Maison Inc.</div>
+</body>
+</html>

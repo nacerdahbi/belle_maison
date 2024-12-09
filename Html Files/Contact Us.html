@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Contact</title>
+<link href="../Css Files/mon-css.css" rel="stylesheet" type="text/css" />
+</head>
+  <body>
+  <ul class="dropdownmenu">
+  <li><a href="Index.html">Accueil</a></li>
+  <li><a href="Proprietes.html">Propriétés</a>
+       <ul>
+           <li><a href="Maisons.html">Maisons</a></li>
+           <li><a href="#">Condominiums</a></li>
+           <li><a href="#">Townhouse</a></li>
+           <li><a href="#">Duplex</a></li>
+       </ul>
+  <li><a href="Calculhypotheque.html">Hypothèque</a></li>
+  <li><a href="Contact Us.html">Contactez nous</a></li>
+  
+  <p id="date">
+    <script language="JavaScript">
+      var Heure=new Date();
+      var jour=Heure.getDate();
+      var mois=Heure.getMonth()+1;
+      var an=Heure.getFullYear();
+      var heure=Heure.getHours();
+      var minutes=Heure.getMinutes();
+document.write(" ",jour,"/",mois,"/",an," - ",heure,":",minutes," min");
+</script>
+</p>
+</ul>
+<h3>Contactez Belle Maison</h3>
+    <form name="RegForm"  onsubmit="return formg()" method="post" class="formg">
+      <div>
+        <label for="Nom">Nom:</label>&nbsp;
+        <input type="text" id="Nom" size="60" name="Nom" />
+      </div>
+      <br />
+      <div>
+        <label for="prenom">Prénom:</label>&nbsp;
+        <input type="text" id="prenom" size="60" name="prenom" />
+      </div>
+      <br />
+      <div>
+        <label for="adresse">Adresse:</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <textarea name="Adresse" cols="60" id="adresse"></textarea>
+      </div>
+      <br />
+      <div>
+        <label for="E-mail" l>Adresse électronique:</label>&nbsp;
+        <input type="text" id="E-mail" size="60" name="Email" />
+      </div>
+      <br />
+   
+      <br />
+      <div>
+        <label for="Téléphone">Téléphone: </label>&nbsp;
+        <input type="text" id="Téléphone" size="60" name="Téléphone" />
+      </div>
+      <br />
+ 
+      <br />
+       <div>
+        <label for="naissance">Date de naissance:</label>&nbsp;
+        <input name="naissance" type="text" id="naissance" value="" size="60">
+      </div>
+      <br />
+      <div>
+        <label for="commentaire">Commentaires: </label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <textarea cols="62" id="commentaire" rows="10" name="Commentaire"></textarea>
+      </div><br /><br /><br />
+      <div>
+        <input type="submit" value="Envoyer" name="Envoyer" />
+        <input type="reset" value="Réinitialiser" name="Réinitialiser" onClick="this.form.reset();" />
+      </div>
+    </form>
+    <script>
+      function formg() {
+        var name = document.forms["RegForm"]["Nom"];
+		var prenom = document.forms["RegForm"]["prenom"];
+        var email = document.forms["RegForm"]["Email"];
+        var phone = document.forms["RegForm"]["Téléphone"];
+        var naissance = document.forms["RegForm"]["date de naissance"];
+        var address = document.forms["RegForm"]["Adresse"];
+		var naissance = document.forms["RegForm"]["naissance"];
+        var comment = document.forms["RegForm"]["Commentaire"];
+
+        if (name.value == "") {
+          alert("Mettez votre nom.");
+          name.focus();
+          return false;
+        }
+		if (prenom.value == "") {
+          alert("Mettez votre prénom.");
+          prenom.focus();
+          return false;
+        }
+        if (address.value == "") {
+          alert("Mettez votre adresse.");
+          address.focus();
+          return false;
+        }
+        if (email.value == "") {
+          alert("Mettez une adresse email valide.");
+          email.focus();
+          return false;
+        }
+        if (email.value.indexOf("@", 0) < 0) {
+          alert("Mettez une adresse email valide.");
+          email.focus();
+          return false;
+        }
+        if (email.value.indexOf(".", 0) < 0) {
+          alert("Mettez une adresse email valide.");
+          email.focus();
+          return false;
+        }
+        if (phone.value == "") {
+          alert("Mettez votre numéro de téléphone.");
+          phone.focus();
+          return false;
+        }
+        if (naissance.value == "") {
+          alert("Mettez votre date de naissance.");
+          naissance.focus();
+          return false;
+        }
+        if (comment.value == "") {
+          alert("Écrivez un commentaire.");
+          comment.focus();
+          return false;
+        }
+        else 
+		 alert("Votre message a été envoyé. Merci!");
+         comment.focus();
+         return true;
+      }
+    </script>
+    <div class="footer">&copy; <script>document.write(new Date().getFullYear());</script> Belle Maison Inc.</div>
+</body>
+</html>
+

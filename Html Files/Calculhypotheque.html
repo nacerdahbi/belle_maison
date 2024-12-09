@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculhypotheque</title>
+<link href="../Css Files/mon-css.css" rel="stylesheet" type="text/css" /> 
+<script src="../js/code.js"></script>
+</head>
+
+<body>
+<header>
+   <ul class="dropdownmenu">
+  <li><a href="Index.html">Accueil</a></li>
+  <li><a href="Proprietes.html">Propriétés</a>
+       <ul>
+           <li><a href="Maisons.html">Maisons</a></li>
+           <li><a href="condominiums.html">Condominiums</a></li>
+           <li><a href="townhouses.html">Townhouse</a></li>
+           <li><a href="duplex.html">Duplex</a></li>
+       </ul>
+  <li><a href="Calculhypotheque.html">Hypothèque</a></li>
+  <li><a href="Contact Us.html">Contactez nous</a></li>
+  
+  <p id="date">
+    <script language="JavaScript">
+      var Heure=new Date();
+      var jour=Heure.getDate();
+      var mois=Heure.getMonth()+1;
+      var an=Heure.getFullYear();
+      var heure=Heure.getHours();
+      var minutes=Heure.getMinutes();
+document.write(" ",jour,"/",mois,"/",an," - ",heure,":",minutes," min");
+</script>
+</p>
+</ul>
+</header>
+<main>
+    <div>
+        <H1>Calcul de l'hypothèque</H1>
+        <div>
+            <div>
+              <div>
+                <div>Montant à emprunter :
+                  <input type="number"  id="amountInput">
+                </div>
+              </div>
+            </div>
+      <div>
+        <div>
+                    <div>Terme : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      <input type="number" id="monthInput">
+                    </div>
+                </div>
+            </div> 
+      <div>
+        <div>
+                    <div>Taux d’intérêt % &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:
+                      <input type="number"  id="intrestInput">
+                    </div>
+                </div>
+            </div>
+          <button class="bout" onClick="getUserInfo()">calculer</button>
+        </div>
+ 
+        <div id="overview">
+             
+        </div>
+ 
+        <div id="payementList">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th> Nbr: </th>
+                        <th> Date: </th>
+                        <th> Capital payé: </th>
+                        <th> Intérêts payés: </th>
+                        <th> Montant restant: </th>
+                    </tr>
+                </thead>
+                <tbody id="details">
+ 
+                </tbody>
+            </table>
+        </div>
+ 
+    </div>
+</main>
+</body>
+</html>
+
+
+
